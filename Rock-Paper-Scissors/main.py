@@ -9,12 +9,12 @@ root.configure(background="lightgreen")
 root.geometry("680x250") 
 
 #picture
-rock_img=ImageTk.PhotoImage(Image.open("rockuser.png").resize((100, 100)))
-paper_img=ImageTk.PhotoImage(Image.open("paperuser.png").resize((100, 100)))
-sciss_img=ImageTk.PhotoImage(Image.open("scissuser.png").resize((100, 100)))
-rockcomp_img=ImageTk.PhotoImage(Image.open("rockcomp.png").resize((100, 100)))
-papercomp_img=ImageTk.PhotoImage(Image.open("papercomp.png").resize((100, 100)))
-scisscomp_img=ImageTk.PhotoImage(Image.open("scisscomp.png").resize((100, 100)))
+rock_img = ImageTk.PhotoImage(Image.open("images/rockuser.png").resize((100, 100)))
+paper_img = ImageTk.PhotoImage(Image.open("images/paperuser.png").resize((100, 100)))
+sciss_img = ImageTk.PhotoImage(Image.open("images/scissuser.png").resize((100, 100)))
+rockcomp_img = ImageTk.PhotoImage(Image.open("images/rockcomp.png").resize((100, 100)))
+papercomp_img = ImageTk.PhotoImage(Image.open("images/papercomp.png").resize((100, 100)))
+scisscomp_img = ImageTk.PhotoImage(Image.open("images/scisscomp.png").resize((100, 100)))
 
 #inserting picture
 user_label=Label(root, image=paper_img, bg="lightgreen")
