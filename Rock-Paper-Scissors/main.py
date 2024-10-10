@@ -38,6 +38,47 @@ comp_indicator.grid(row=0, column=1)
 msg=Label(root, font=100, bg="lightgreen", fg="black")
 msg.grid(row=4, column=2)
 
+#update messages
+def updateMessage(x):
+    msg['text'] = x
+
+#update score
+def updateUserScore():
+    score=int(playerScore["text"])
+    score+=1
+    playerScore["text"]=str(score)
+
+def updateComputerScore():
+    score=int(computerScore["text"])
+    score+=1
+    computerScore["text"]=str(score)
+
+#check for winner
+def CheckWinner(player, computer):
+    if player==computer:
+        updateMessage("It's a tie!")
+    elif player=="rock":
+        if computer=="paper":
+            updateMessage("Oops, you lose!")
+            updateComputerScore()
+        else:
+            updateMessage("Yay, you win!!!")
+            updateUserScore()
+    elif player=="paper":
+        if computer=="scissor":
+            updateMessage("Oops, you lose!")
+            updateComputerScore()
+        else:
+            updateMessage("Yay, you win!!!")
+            updateUserScore()
+    else:
+        if computer=="rock":
+            updateMessage("Oops, you lose!")
+            updateComputerScore()
+        else:
+            updateMessage("Yay, you win!!!")
+            updateUserScore()
+
 #update choices
 
 choices=["rock","paper","scissor"]
@@ -60,6 +101,7 @@ def updateChoice(x):
         user_label.configure(image=paper_img)
     else:
         user_label.configure(image=sciss_img) 
+    CheckWinner(x,compChoice)
 
 #buttons
 rock = Button(root, width=20, height=2, text="ROCK", bg="#F2827F", fg="black", command=lambda:updateChoice("rock")).grid(row=2, column=1)
