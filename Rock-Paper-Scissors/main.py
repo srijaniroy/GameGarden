@@ -119,7 +119,7 @@ rock = Button(root, width=20, height=2, text="ROCK", bg="#F2827F", fg="black", c
 paper = Button(root, width=20, height=2, text="PAPER", bg="#FFE900", fg="black", command=lambda:updateChoice("paper")).grid(row=2, column=2)
 scissor = Button(root, width=20, height=2, text="SCISSOR", bg="#05C3DD", fg="black", command=lambda:updateChoice("scissor")).grid(row=2, column=3)
 
-finish_button = Button(root, width=20, height=2, text="FINISH", bg="#FF9999", fg="black", command=finalResult)  # Added this button
+finish_button = Button(root, width=20, height=2, text="FINISH", bg="#FF9999", fg="black", command=finalResult) 
 finish_button.grid(row=3, column=2)
 
 root.mainloop()
