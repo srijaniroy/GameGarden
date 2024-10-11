@@ -32,7 +32,7 @@ for i in range(7):
     images.append(image)
 
 # game variables
-def reset_game():  # function to reset the game variables
+def reset_game():  # NEW FUNCTION TO RESET GAME VARIABLES
     global hangman_status, word, guessed
     hangman_status = 0
     words = ["IDE", "REPLIT", "PYTHON", "PYGAME"]
@@ -122,13 +122,13 @@ def main():
         
         if won:
             display_message("You WON!")
-            reset_game()  # reset game after win
-            continue  # continue to the next loop
+            reset_game()  # RESET GAME AFTER WIN
+            continue  # CONTINUE TO THE NEXT LOOP
 
         if hangman_status == 6:
             display_message("You LOST!")
-            reset_game()  # reset game after loss
-            continue  # continue to the next loop
+            reset_game()  # RESET GAME AFTER LOSS
+            continue  # CONTINUE TO THE NEXT LOOP
 
 main()
 
