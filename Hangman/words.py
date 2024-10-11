@@ -150,7 +150,6 @@ words = [
     "UKRAINE",
     "UAE",
     "USA",
-    "UK",
     "URUGUAY",
     "UZBEKISTAN",
     "VANUATU",
