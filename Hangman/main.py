@@ -1,6 +1,7 @@
 import pygame
 import math
 import random
+from words import words
 
 # setup display
 pygame.init()
@@ -22,8 +23,8 @@ for i in range(26):
 
 # fonts
 LETTER_FONT = pygame.font.SysFont('comicsans', 30)
-WORD_FONT = pygame.font.SysFont('comicsans', 60)
-TITLE_FONT = pygame.font.SysFont('comicsans', 70)
+WORD_FONT = pygame.font.SysFont('comicsans', 30)
+TITLE_FONT = pygame.font.SysFont('comicsans', 50)
 
 # load images.
 images = []
@@ -35,7 +36,7 @@ for i in range(7):
 def reset_game():  # function to reset the game variables
     global hangman_status, word, guessed
     hangman_status = 0
-    words = ["IDE", "REPLIT", "PYTHON", "PYGAME"]
+    
     word = random.choice(words)
     guessed = []
     # Reset letter buttons
@@ -43,7 +44,7 @@ def reset_game():  # function to reset the game variables
         letter[3] = True  # Set visibility back to True
 
 hangman_status = 0
-words = ["IDE", "REPLIT", "PYTHON", "PYGAME"]
+
 word = random.choice(words)
 guessed = []
 
@@ -55,7 +56,7 @@ def draw():
     win.fill(WHITE)
 
     # draw title
-    text = TITLE_FONT.render("DEVELOPER HANGMAN", 1, BLACK)
+    text = TITLE_FONT.render("HANGMAN: Guess the Country", 1, BLACK)
     win.blit(text, (WIDTH/2 - text.get_width()/2, 20))
 
     # draw word
@@ -89,7 +90,6 @@ def display_message(message):
 
 def main():
     global hangman_status
-
     FPS = 60
     clock = pygame.time.Clock()
     run = True
