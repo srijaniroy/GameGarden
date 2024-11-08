@@ -29,11 +29,21 @@
    ```
 
 ## How to Play
-1. Run the Python script for the desired game:
-   - For Rock, Paper, Scissors: `python rock_paper_scissors.py`
-   - For Hangman: `python hangman.py`
-2. Follow on-screen instructions to start the game.
-3. Enjoy multiple rounds of gameplay and track your score!
+1. Navigate to the folder containing the game you want to play:
+   - **Rock, Paper, Scissors**:  
+     `cd Rock-Paper-Scissors/`
+   - **Hangman**:  
+     `cd Hangman/`
+   
+2. Run the Python script for the selected game:
+   - For **Rock, Paper, Scissors**:  
+     `python main.py`
+   - For **Hangman**:  
+     `python main.py`
+
+3. Follow the on-screen instructions to start the game.
+4. Enjoy multiple rounds of gameplay and track your score!
+
 
 ## Features & Enhancements
 - **Replayability**: Random word generation for Hangman and random computer choices for Rock, Paper, Scissors.
